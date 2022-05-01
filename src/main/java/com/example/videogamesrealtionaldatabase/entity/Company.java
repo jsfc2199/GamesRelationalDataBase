@@ -15,7 +15,7 @@ public class Company {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String companyName;
+    private String companyname;
 
     //list of games 'cause a company can have many games
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

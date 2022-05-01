@@ -19,11 +19,6 @@ public class CompanyServiceImplementation implements CompanyService{
     private GameRepository gameRepository;
 
     @Override
-    public List<Company> showAllCompanies() {
-        return companyRepository.findAll();
-    }
-
-    @Override
     public Company createCompany(Company company) {
         return companyRepository.save(company);
     }
@@ -49,4 +44,10 @@ public class CompanyServiceImplementation implements CompanyService{
         }
         companyRepository.deleteById(company.getId());
     }
+
+    @Override
+    public List<Company> showAllCompanies() {
+        return companyRepository.findAll();
+    }
+
 }
